@@ -1,0 +1,22 @@
+module Lab(
+  input logic a, b, c,
+  output logic Y
+);
+
+logic notA, notB, notC, orAB, termOne, nottermOne, nottermTwo, termTwo, orAnotBnot;
+
+not (notA, a); 
+not (notB, b); 
+not (notC, c); 
+
+or(orAnotBnot, notA, notB);
+and(termOne,  orAnotBnot, c);
+not(nottermOne, termOne);
+
+or(orAnotBnot, notA, notB);
+and(termTwo, orAnotBnot, notC);
+not(nottermTwo, termTwo);
+
+and(Y, nottermOne, nottermtwo);
+
+endmodule

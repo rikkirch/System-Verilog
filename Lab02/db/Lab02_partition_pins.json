@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "var1",
+					"strict" : false
+				},
+				{
+					"name" : "var2",
+					"strict" : false
+				},
+				{
+					"name" : "varZ",
+					"strict" : false
+				},
+				{
+					"name" : "varW",
+					"strict" : false
+				},
+				{
+					"name" : "varY",
+					"strict" : false
+				},
+				{
+					"name" : "varX",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

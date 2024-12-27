@@ -1,0 +1,31 @@
+|Lab02
+varW => varW.IN2
+varX => varX.IN2
+varY => varY.IN2
+varZ => varZ.IN2
+var1 << functionWXYZ:fan.F
+var2 << functionWXYZsimplified:fan1.F
+
+
+|Lab02|functionWXYZ:fan
+W => WideAnd2.IN0
+W => WideAnd0.IN0
+W => WideAnd1.IN0
+X => WideAnd0.IN1
+X => WideAnd1.IN1
+X => WideAnd2.IN1
+Y => WideAnd1.IN2
+Y => WideAnd2.IN2
+Z => WideAnd0.IN2
+F <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab02|functionWXYZsimplified:fan1
+W => WideAnd0.IN0
+X => WideAnd0.IN1
+X => NotXAndY.IN0
+Y => NotXAndY.IN1
+Z => WideAnd0.IN2
+F <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+

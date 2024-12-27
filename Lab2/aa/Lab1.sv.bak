@@ -1,0 +1,7 @@
+module Lab1(
+
+input logic varw, varx, vary, varz, output logic var1, var2
+
+functionwxyz fan(. F(var1),.w(varw), X(varx), Y(vary), z(varz)); functionwxyzsimplified fanl(.F(var 2)), .w(varw), .x(varx), Y(vary), .z(varz));
+
+endmodule
