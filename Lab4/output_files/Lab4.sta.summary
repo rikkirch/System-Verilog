@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Clock50M'
+Slack : -4.325
+TNS   : -73.024
+
+Type  : Slow 1200mV 85C Model Setup 'debouncer:module1|A'
+Slack : -1.341
+TNS   : -2.486
+
+Type  : Slow 1200mV 85C Model Hold 'Clock50M'
+Slack : 0.623
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'debouncer:module1|A'
+Slack : 0.650
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock50M'
+Slack : -3.000
+TNS   : -26.851
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'debouncer:module1|A'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'Clock50M'
+Slack : -3.951
+TNS   : -66.739
+
+Type  : Slow 1200mV 0C Model Setup 'debouncer:module1|A'
+Slack : -1.277
+TNS   : -2.231
+
+Type  : Slow 1200mV 0C Model Hold 'Clock50M'
+Slack : 0.576
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'debouncer:module1|A'
+Slack : 0.702
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock50M'
+Slack : -3.000
+TNS   : -26.851
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'debouncer:module1|A'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Clock50M'
+Slack : -1.344
+TNS   : -22.640
+
+Type  : Fast 1200mV 0C Model Setup 'debouncer:module1|A'
+Slack : -0.289
+TNS   : -0.447
+
+Type  : Fast 1200mV 0C Model Hold 'Clock50M'
+Slack : 0.240
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'debouncer:module1|A'
+Slack : 0.409
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock50M'
+Slack : -3.000
+TNS   : -20.612
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'debouncer:module1|A'
+Slack : 0.326
+TNS   : 0.000
+
+------------------------------------------------------------
