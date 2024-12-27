@@ -1,0 +1,9 @@
+|Lab1B
+a => andAB.IN0
+a => comb.IN0
+b => andAB.IN1
+b => comb.IN1
+Z << comb.DB_MAX_OUTPUT_PORT_TYPE
+Y << andAB.DB_MAX_OUTPUT_PORT_TYPE
+
+
