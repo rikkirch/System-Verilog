@@ -1,0 +1,8 @@
+module test (
+ input a , b, c, d ,
+ output [15:0]y,
+)
+
+dec416 ( .a[0](a) , .a[1](b) , .a[2](c) , .a[3](d)  , .out[0](y[0]) , .out[1](y[1]) , .out[2](y[2]) , .out[3](y[3]) , .out[4](y[4]) , .out[5](y[5]) , .out[6](y[6]) , .out[7](y[7])
+
+end module

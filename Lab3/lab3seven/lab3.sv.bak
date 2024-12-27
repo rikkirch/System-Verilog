@@ -1,0 +1,41 @@
+module seven_seg(
+
+      input logic W, X, Y, Z,
+      output logic zero, one, two, three, four, five, six, seven, eight, nine, A, B, C, D, E, F
+
+);
+
+logic Sa, Sb, Sc, Sd, Se, Sf, Sg;
+
+assign zero = ~W&~X&~Y&~Z
+assign one = ~W&~X&~Y&Z
+assign two = ~W&~X&Y&~Z
+assign three = ~W&~X&Y&Z
+assign four = ~W&X&~Y&~Z
+assign five = ~W&X&~Y&Z
+assign six = ~W&X&Y&~Z
+assign seven = ~W&X&Y&Z
+assign eight = W&~X&~Y&~Z
+assign nine = W&~X&~Y&Z
+assign A = W&~X&Y&~Z
+assign B = W&~X&Y&Z
+assign C = W&X&~Y&~Z
+assign D = W&X&~Y&Z
+assign E = W&X&Y&~Z
+assign F = W&X&Y&Z
+
+or(Sa, zero, two, three, five, six, seven, eight, nine, A, C, E, F);
+
+or(Sb, zero, one, two, three, four, seven, eight, nine, A, D);
+
+or(Sc, zero, one, three, four, five, six, seven, eight, nine, A, B, D);
+
+or(Sd, zero, two, three, five, six, eight, B, C, D, E);
+
+or(Se, zero, two, six, eight, A, B, C, D, E, F);
+
+or(Sf, zero, four, five, six, eight, nine, A, B, C, E, F);
+
+or(Sg, two, three, four, five, six, eight, nine, A, B, D, E, F);
+
+endmodule

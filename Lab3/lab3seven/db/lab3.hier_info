@@ -1,0 +1,65 @@
+|lab3
+W => W.IN1
+X => X.IN1
+Y => Y.IN1
+Z => Z.IN1
+Sa << Sa.DB_MAX_OUTPUT_PORT_TYPE
+Sb << Sb.DB_MAX_OUTPUT_PORT_TYPE
+Sc << Sc.DB_MAX_OUTPUT_PORT_TYPE
+Sd << Sd.DB_MAX_OUTPUT_PORT_TYPE
+Se << Se.DB_MAX_OUTPUT_PORT_TYPE
+Sf << Sf.DB_MAX_OUTPUT_PORT_TYPE
+Sg << Sg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab3|dec416:comb_3
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[1] => out.IN1
+a[1] => out.IN1
+a[1] => out.IN1
+a[1] => out.IN1
+a[1] => out.IN1
+a[1] => out.IN1
+a[1] => out.IN1
+a[1] => out.IN1
+a[2] => out.IN0
+a[2] => out.IN0
+a[2] => out.IN0
+a[2] => out.IN0
+a[3] => out.IN1
+a[3] => out.IN1
+a[3] => out.IN1
+a[3] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+

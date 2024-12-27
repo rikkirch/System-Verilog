@@ -1,0 +1,74 @@
+|Lab3
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+y[0] << dec416:comb_3.out
+y[1] << dec416:comb_3.out
+y[2] << dec416:comb_3.out
+y[3] << dec416:comb_3.out
+y[4] << dec416:comb_3.out
+y[5] << dec416:comb_3.out
+y[6] << dec416:comb_3.out
+y[7] << dec416:comb_3.out
+y[8] << dec416:comb_3.out
+y[9] << dec416:comb_3.out
+y[10] << dec416:comb_3.out
+y[11] << dec416:comb_3.out
+y[12] << dec416:comb_3.out
+y[13] << dec416:comb_3.out
+y[14] << dec416:comb_3.out
+y[15] << dec416:comb_3.out
+
+
+|Lab3|dec416:comb_3
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[0] => out.IN1
+a[1] => out.IN1
+a[1] => out.IN1
+a[1] => out.IN1
+a[1] => out.IN1
+a[1] => out.IN1
+a[1] => out.IN1
+a[1] => out.IN1
+a[1] => out.IN1
+a[2] => out.IN0
+a[2] => out.IN0
+a[2] => out.IN0
+a[2] => out.IN0
+a[3] => out.IN1
+a[3] => out.IN1
+a[3] => out.IN1
+a[3] => out.IN1
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
