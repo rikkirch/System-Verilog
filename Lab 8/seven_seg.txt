@@ -1,0 +1,57 @@
+ module seven_seg(
+
+	input logic [3:0] A,
+
+	output logic [6:0] digit
+
+);
+
+	
+
+	logic [15:0] a, b, c, d, e, f, g;
+
+
+
+	dec416 first (.A({A[3:0]}), .Y ({a}));
+
+	assign digit [0] = ~(a[0]| a[2]|a[3]|a[5]|a[6]|a[7]|a[8]|a[9]|a[10]|a[12]|a[14]|a[15]);
+
+	
+
+	dec416 second (.A({A[3:0]}), .Y ({b}));
+
+	assign digit[1] = ~(b[0]| b[1]| b[2]| b[3]| b[4]| b[7]| b[8]| b[9]| b[10]| b[13]);
+
+
+
+	dec416 third (.A({A[3:0]}), .Y ({c}));
+
+	assign digit[2] = ~(c[0]| c[1]| c[3]| c[4]| c[5]| c[6]| c[7]| c[8]| c[9]| c[10]| c[11]| c[13]);
+
+	
+
+	dec416 fourth (.A({A[3:0]}), .Y ({d}));
+
+	assign digit[3] = ~(d[0]| d[2]| d[3]| d[5]| d[6]|d[8]| d[9]| d[11]| d[12]| d[13]| d[14]);
+
+
+
+	dec416 fifth (.A({A[3:0]}), .Y ({e}));
+
+	assign digit [4] = ~(e[0]| e[2]| e[6]| e[8] |e[10]| e[11]| e[12]| e[13]| e[14]| e[15]);
+
+	
+
+	dec416 sixth (.A({A[3:0]}), .Y ({f}));
+
+	assign digit [5] = ~(f[0]| f[4]| f[5]| f[6]| f[8]| f[9]| f[10]| f[11]| f[12]| f[14]| f[15]);
+
+
+
+	dec416 seventh (.A({A[3:0]}), .Y ({g}));
+
+	assign digit [6] = ~(g[2]| g[3]| g[4]| g[5]| g[6]| g[8]| g[9]| g[10]| g[11]| g[13]| g[14]| g[15]);
+
+
+
+endmodule

@@ -1,0 +1,24 @@
+module johnsonringtop (
+input logic KEY0, CLK50M, in,
+output logic [3:0] LED
+);
+
+logic C;
+
+logic [3:0] john, ring;
+
+debouncer clk (.A_noisy(KEY0), .CLK50M(CLK50M), .A(C));
+
+johnson4 johnny (.clk(C), .select(in), .out(john));
+
+ring4 ringny (.clk(C), .select(in), .out(ring));
+
+always @(C)
+begin
+	if(~in)
+		LED <= john;
+	else
+		LED <= ring;
+end
+
+endmodule

@@ -1,0 +1,6 @@
+
+State Machine - |ALUcontroller|controller:_cont|crr_state
+Name crr_state.S_GET_OPERATION crr_state.S_STORE_RESULT crr_state.S_GET_A_INPUT 
+crr_state.S_GET_OPERATION 0 0 0 
+crr_state.S_GET_A_INPUT 1 0 1 
+crr_state.S_STORE_RESULT 1 1 0 

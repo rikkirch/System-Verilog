@@ -1,0 +1,29 @@
+module shiftRegTopLevel (
+input logic CLK50M, KEY0, KEY1, SLin, SRin,
+input logic [3:0] in,
+input logic [1:0] select,
+output logic [6:0] digit0, digit1,
+output logic [7:0] LED
+);
+
+	logic [3:0] _Q0;
+	logic [7:4] _Q1;
+
+	logic clock, reset;
+
+	debouncer clk (.A_noisy(KEY0), .CLK50M(CLK50M), .A(clock));
+	
+	debouncer rst (.A_noisy(KEY1), .CLK50M(CLK50M), .A(reset));
+
+	shiftreg74194 one (.in(in), .clk(clock), .reset(reset), .select(select), .SLin(SLin), .SRin(_Q1[4]), .out(_Q0));
+	
+	shiftreg74194 two (.in(in), .clk(clock), .reset(reset), .select(select), .SLin(_Q0[3]), .SRin (SRin), .out(_Q1));
+	
+	assign LED[3:0] = _Q0;
+	assign LED[7:4] = _Q1;
+	
+	seven_seg seg0 (.A(_Q0), .digit(digit0));
+	
+	seven_seg seg1 (.A(_Q1), .digit(digit1));
+	
+endmodule

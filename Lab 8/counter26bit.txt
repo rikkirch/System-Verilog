@@ -1,0 +1,36 @@
+module counter26bit (
+input logic clk,
+output [1:0]LED
+);
+
+ parameter 		fiftymil = 7'h2FAF080;
+ parameter  	twentyfivemil = 7'h17D7840;
+
+
+ reg [25:0] q;
+ 
+ logic flag;
+
+always @(posedge clk)
+begin
+	if (q < twentyfivemil)
+	begin
+		 flag <= 1'b0;
+	end
+	else
+		 flag <= 1'b1;
+	if (q >= fiftymil)
+	begin
+		 q <= 7'b0;
+		flag <= 1'b1;
+	end
+		 
+	 q <= q + 1;
+end
+
+assign LED[0] = q [25];
+assign LED[1] = flag;		
+
+
+
+endmodule

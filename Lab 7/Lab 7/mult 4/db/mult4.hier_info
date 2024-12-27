@@ -1,0 +1,395 @@
+|mult4
+A[0] => A[0].IN4
+A[1] => A[1].IN4
+A[2] => A[2].IN4
+A[3] => A[3].IN4
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+P[0] << PP4:pp_stage0.P
+P[1] << PP4:pp_stage1.P
+P[2] << PP4:pp_stage2.P
+P[3] << PP4:pp_stage3.P
+P[4] << PP4:pp_stage3.P
+P[5] << PP4:pp_stage3.P
+P[6] << PP4:pp_stage3.P
+P[7] << PP4:pp_stage3.P
+
+
+|mult4|PP4:pp_stage0
+A[0] => Ain.IN0
+A[1] => Ain.IN0
+A[2] => Ain.IN0
+A[3] => Ain.IN0
+PPrev[0] => PPrev[0].IN1
+PPrev[1] => PPrev[1].IN1
+PPrev[2] => PPrev[2].IN1
+PPrev[3] => PPrev[3].IN1
+B => Ain.IN1
+B => Ain.IN1
+B => Ain.IN1
+B => Ain.IN1
+P[0] <= adder4:fa0.S
+P[1] <= adder4:fa0.S
+P[2] <= adder4:fa0.S
+P[3] <= adder4:fa0.S
+P[4] <= adder4:fa0.C4
+
+
+|mult4|PP4:pp_stage0|adder4:fa0
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+S[0] <= fulladder:FA0.S
+S[1] <= fulladder:FA1.S
+S[2] <= fulladder:FA2.S
+S[3] <= fulladder:FA3.S
+C4 <= fulladder:FA3.Cout
+V <= V.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage0|adder4:fa0|fulladder:FA0
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage0|adder4:fa0|fulladder:FA1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage0|adder4:fa0|fulladder:FA2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage0|adder4:fa0|fulladder:FA3
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage1
+A[0] => Ain.IN0
+A[1] => Ain.IN0
+A[2] => Ain.IN0
+A[3] => Ain.IN0
+PPrev[0] => PPrev[0].IN1
+PPrev[1] => PPrev[1].IN1
+PPrev[2] => PPrev[2].IN1
+PPrev[3] => PPrev[3].IN1
+B => Ain.IN1
+B => Ain.IN1
+B => Ain.IN1
+B => Ain.IN1
+P[0] <= adder4:fa0.S
+P[1] <= adder4:fa0.S
+P[2] <= adder4:fa0.S
+P[3] <= adder4:fa0.S
+P[4] <= adder4:fa0.C4
+
+
+|mult4|PP4:pp_stage1|adder4:fa0
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+S[0] <= fulladder:FA0.S
+S[1] <= fulladder:FA1.S
+S[2] <= fulladder:FA2.S
+S[3] <= fulladder:FA3.S
+C4 <= fulladder:FA3.Cout
+V <= V.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage1|adder4:fa0|fulladder:FA0
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage1|adder4:fa0|fulladder:FA1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage1|adder4:fa0|fulladder:FA2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage1|adder4:fa0|fulladder:FA3
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage2
+A[0] => Ain.IN0
+A[1] => Ain.IN0
+A[2] => Ain.IN0
+A[3] => Ain.IN0
+PPrev[0] => PPrev[0].IN1
+PPrev[1] => PPrev[1].IN1
+PPrev[2] => PPrev[2].IN1
+PPrev[3] => PPrev[3].IN1
+B => Ain.IN1
+B => Ain.IN1
+B => Ain.IN1
+B => Ain.IN1
+P[0] <= adder4:fa0.S
+P[1] <= adder4:fa0.S
+P[2] <= adder4:fa0.S
+P[3] <= adder4:fa0.S
+P[4] <= adder4:fa0.C4
+
+
+|mult4|PP4:pp_stage2|adder4:fa0
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+S[0] <= fulladder:FA0.S
+S[1] <= fulladder:FA1.S
+S[2] <= fulladder:FA2.S
+S[3] <= fulladder:FA3.S
+C4 <= fulladder:FA3.Cout
+V <= V.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage2|adder4:fa0|fulladder:FA0
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage2|adder4:fa0|fulladder:FA1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage2|adder4:fa0|fulladder:FA2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage2|adder4:fa0|fulladder:FA3
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage3
+A[0] => Ain.IN0
+A[1] => Ain.IN0
+A[2] => Ain.IN0
+A[3] => Ain.IN0
+PPrev[0] => PPrev[0].IN1
+PPrev[1] => PPrev[1].IN1
+PPrev[2] => PPrev[2].IN1
+PPrev[3] => PPrev[3].IN1
+B => Ain.IN1
+B => Ain.IN1
+B => Ain.IN1
+B => Ain.IN1
+P[0] <= adder4:fa0.S
+P[1] <= adder4:fa0.S
+P[2] <= adder4:fa0.S
+P[3] <= adder4:fa0.S
+P[4] <= adder4:fa0.C4
+
+
+|mult4|PP4:pp_stage3|adder4:fa0
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+Cin => Cin.IN1
+S[0] <= fulladder:FA0.S
+S[1] <= fulladder:FA1.S
+S[2] <= fulladder:FA2.S
+S[3] <= fulladder:FA3.S
+C4 <= fulladder:FA3.Cout
+V <= V.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage3|adder4:fa0|fulladder:FA0
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage3|adder4:fa0|fulladder:FA1
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage3|adder4:fa0|fulladder:FA2
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mult4|PP4:pp_stage3|adder4:fa0|fulladder:FA3
+A => S.IN0
+A => Cout.IN0
+A => Cout.IN0
+B => S.IN1
+B => Cout.IN1
+B => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+

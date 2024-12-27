@@ -1,0 +1,43 @@
+module shiftreg74194 (
+input logic [3:0] in,
+input logic clk, reset,
+input logic [1:0] select,
+input logic SLin, SRin, 
+output logic [3:0] out
+);
+
+parameter NA = 2'b00;
+parameter SR = 2'b01;
+parameter SL = 2'b10;
+parameter LD = 2'b11;
+
+always_ff @ (negedge clk, negedge reset)
+	begin
+		if (~reset)
+		begin
+		out <= 0; 
+		end
+		else
+		begin
+			case (select)
+				NA:
+				begin
+						out <= out;
+				end
+				SR:
+				begin
+						out <= {SRin, out[3:1]};
+				end
+				SL:
+				begin
+						out <= {out[2:0], SLin};
+				end
+				LD:
+				begin
+						out <= in;
+				end
+		
+			endcase
+		end
+	end
+endmodule
