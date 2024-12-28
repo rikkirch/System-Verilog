@@ -1,16 +1,3 @@
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "<table class=\"ee-notebook-buttons\" align=\"left\">\n",
-    "    <td><a target=\"_parent\"  href=\"https://github.com/gee-community/geemap/tree/master/tutorials/Image/03_image_metadata.ipynb\"><img width=32px src=\"https://www.tensorflow.org/images/GitHub-Mark-32px.png\" /> View source on GitHub</a></td>\n",
-    "    <td><a target=\"_parent\"  href=\"https://nbviewer.jupyter.org/github/gee-community/geemap/blob/master/tutorials/Image/03_image_metadata.ipynb\"><img width=26px src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/883px-Jupyter_logo.svg.png\" />Notebook Viewer</a></td>\n",
-    "    <td><a target=\"_parent\"  href=\"https://colab.research.google.com/github/gee-community/geemap/blob/master/tutorials/Image/03_image_metadata.ipynb\"><img width=26px src=\"https://www.tensorflow.org/images/colab_logo_32px.png\" /> Run in Google Colab</a></td>\n",
-    "</table>"
-   ]
-  }
 module Lab8 (
 input logic KEY0, CLK50M, in,
 output logic [3:0] LED
